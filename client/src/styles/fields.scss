@@ -1,0 +1,160 @@
+@import '../styles/colors';
+
+.text-field {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  font-family: $classy;
+
+  .FieldLabel {
+    display: flex;
+    padding-left: 1%;
+    font-weight: bolder;
+  }
+  
+  input {
+    width: 100%;
+    height: 1.8em;
+    padding-left: 1%;
+    border: none;
+    border-bottom: 1px solid $tepidAngst;
+    margin: 5px 0;
+    font-size: 16px;
+    font-family: $classy;
+    font-weight: lighter;
+  }
+
+  input:focus {
+    outline: none;
+  }
+}
+
+.dropdown-list-field {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  font-family: $classy;
+
+  .FieldLabel {
+    display: flex;
+    padding-left: 1%;
+    font-weight: bolder;
+  }
+
+  .DropdownListField {
+    .rw-widget-input {
+      margin-top: 5px;
+      box-shadow: none;
+    }
+    
+    .rw-widget-input:hover {
+      box-shadow: none;
+    }
+
+    .rw-widget-container {
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid $tepidAngst;
+
+      .rw-input {
+        padding: none;
+        padding-left: 1%;
+        margin: none;
+        margin: 10px 0;
+        background-color: $churchCrab;
+        font-size: 16px;
+        color: $faceBusiness;
+      }
+    }
+
+    .rw-popup-container {
+      li {
+        border: none;
+        font-size: 16px;
+      }
+
+      li:before {
+        content: "";
+      }
+    }
+  }
+}
+
+.text-area-field {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  font-family: $classy;
+
+  .FieldLabel {
+    display: flex;
+    padding-left: 1%;
+    font-weight: bolder;
+  }
+
+  textarea {
+    padding-left: 1%;
+    padding-top: 1%;
+    border: 1px solid $tepidAngst;
+    margin: 5px 0;
+    font-size: 16px;
+    font-family: $classy;
+    resize: none;
+  }
+
+  textarea:focus {
+    outline: none;
+  }
+}
+
+.dropzone-field {
+  // height: calc(40vw * 80%);
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  font-family: $classy;
+
+  .FieldLabel {
+    padding-left: 1%;
+    margin-bottom: 10px;
+    display: flex;
+    font-weight: bolder;
+  }
+  
+  .Dropzone {
+    height: 300px;
+  }
+}
+
+input[type="text"]:enabled {
+  background-color: $churchCrab;
+}
+
+input[type="text"]:enabled::placeholder {
+  color: $churchCrab;
+}
+
+input[type="text"]:disabled {
+  background-color: $dyingUrchin;
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+
+input#calender::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input[type=date]::-webkit-inner-spin-button, 
+input[type=date]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

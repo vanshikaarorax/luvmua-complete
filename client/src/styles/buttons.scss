@@ -1,0 +1,72 @@
+@import '../styles/colors';
+@import '../styles/fonts';
+
+@mixin bp($point) {
+  @if $point == smallScreen {
+    @media (max-width: 1200px) { @content; }
+  } @else if $point == tablet {
+    @media (max-width: 768px) { @content; }
+  } @else if $point == mobile {
+    @media (max-width: 520px) { @content; }
+  } @else if $point == smallMobile {
+    @media (max-width: 375px) { @content; }
+  }
+}
+
+.btn-req-animated {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.btn-req-animated:focus {
+  outline: none;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  border: none;
+  background-color: $faceBusiness;
+  font-family: $classy;
+  font-size: 90%;
+  color: $passiveCrane;
+  cursor: pointer;
+
+  @include bp(smallScreen) {
+    font-size: 80%;
+    width: 120px;
+    height: 45px;
+  }
+
+  &:hover {
+    color: $dyingUrchin;
+  }
+
+  &:active {
+    color: $tepidAngst;
+  }
+
+  &:disabled {
+    color: $passiveCrane;
+  }
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.admin-form-btn-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  .btn {
+    margin-right: 5px;
+  }
+}
+
+.btn:disabled {
+  background-color: $dyingUrchin;
+}

@@ -1,0 +1,9 @@
+@import "../styles/colors";
+
+a,
+a:hover,
+a:active,
+a:visited {
+  color: $faceBusiness;
+  text-decoration: none;
+}
